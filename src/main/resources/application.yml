@@ -1,0 +1,12 @@
+server:
+  port: 3030
+
+spring:
+  config:
+    import:
+      - ${CONFIG_LOCATION:classpath:/properties/control-panel.yml}
+  banner:
+    location: classpath:/banner/custom_banner.txt
+
+logging:
+  enabled: ${LOGGING_ENABLED:true}

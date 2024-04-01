@@ -1,0 +1,13 @@
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+.theme-switch-container {
+    position: fixed;
+    top: 20px;
+    right: 40px;
+    z-index: 9999;
+    transform: scale(110%);
+    font-family: "NeutralFace Bold", sans-serif;
+
+}

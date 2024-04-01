@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}
+
+section {
+    display: flex;
+    min-height: 80vh;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #f7f7fe, #dff1ff);
+}
+
+section .colour {
+    position: absolute;
+    filter: blur(150px);
+}
+
+section .colour:nth-child(1) {
+    top: -450px;
+    width: 600px;
+    height: 600px;
+    background: #bf4ad4;
+    animation: animate 8s infinite alternate ease-in-out;
+}
+
+section .colour:nth-child(2) {
+    left: 100px;
+    width: 500px;
+    height: 500px;
+    bottom: -400px;
+    background: #ffa500;
+    animation: animate 12s infinite alternate ease-in-out;
+}
+
+section .colour:nth-child(3) {
+    right: 100px;
+    bottom: 50px;
+    width: 300px;
+    height: 300px;
+    background: #2b67f3;
+    animation: animate 16s infinite alternate ease-in-out;
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(20px, 0);
+    }
+    25% {
+        transform: translate(0, 20px);
+    }
+    50% {
+        transform: translate(-20px, 0);
+    }
+    75% {
+        transform: translate(0, -20px);
+    }
+    100% {
+        transform: translate(20px, 0); /* Возвращение в начальную позицию */
+    }
+}
+
+.container-box {
+    width: 400px;
+    display: flex;
+    min-height: 400px;
+    position: relative;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
